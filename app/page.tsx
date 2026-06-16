@@ -1,3 +1,5 @@
+import Navbar from "./components/Navbar";
+
 export default function Home() {
   const productions = [
     "Feature Film Project",
@@ -18,26 +20,9 @@ export default function Home() {
         WhatsApp
       </a>
       <main className="bg-black text-white min-h-screen">
-      {/* Navbar */}
-      <nav className="fixed top-0 w-full bg-black/90 backdrop-blur z-50 border-b border-yellow-500/20">
-        <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-          <div>
-            <div className="text-yellow-500 text-2xl font-bold">SKP</div>
-            <div className="text-xs text-gray-400">
-              Shyamkasturi Productions
-            </div>
-          </div>
+        <Navbar />
 
-          <div className="hidden md:flex gap-8 text-sm">
-            <a href="#about">About</a>
-            <a href="#services">Services</a>
-            <a href="#productions">Productions</a>
-            <a href="#contact">Contact</a>
-          </div>
-        </div>
-      </nav>
-
-      {/* Hero */}
+        {/* Hero */}
       <section
   className="min-h-screen flex flex-col justify-center items-center text-center px-6 bg-cover bg-center"
   style={{
