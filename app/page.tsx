@@ -9,7 +9,15 @@ export default function Home() {
   ];
 
   return (
-    <main className="bg-black text-white min-h-screen">
+    <>
+      <a
+        href="https://wa.me/919890831785"
+        target="_blank"
+        className="fixed bottom-6 right-6 bg-green-500 text-white px-4 py-3 rounded-full shadow-lg"
+      >
+        WhatsApp
+      </a>
+      <main className="bg-black text-white min-h-screen">
       {/* Navbar */}
       <nav className="fixed top-0 w-full bg-black/90 backdrop-blur z-50 border-b border-yellow-500/20">
         <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
@@ -30,7 +38,13 @@ export default function Home() {
       </nav>
 
       {/* Hero */}
-      <section className="min-h-screen flex flex-col justify-center items-center text-center px-6">
+      <section
+  className="min-h-screen flex flex-col justify-center items-center text-center px-6 bg-cover bg-center"
+  style={{
+    backgroundImage:
+      "url('https://images.unsplash.com/photo-1485846234645-a62644f84728')",
+  }}
+>
         <h1 className="text-5xl md:text-8xl font-bold text-yellow-500">
           Shyamkasturi Productions
         </h1>
@@ -187,9 +201,20 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="border-t border-yellow-500/20 py-8 text-center text-gray-500">
-        © 2026 Shyamkasturi Productions. All Rights Reserved.
-      </footer>
+      <footer className="border-t border-yellow-500/20 py-10 text-center">
+  <h3 className="text-yellow-500 font-bold text-xl">
+    Shyamkasturi Productions
+  </h3>
+
+  <p className="text-gray-400 mt-2">
+    Stories Beyond Boundaries
+  </p>
+
+  <p className="text-gray-500 mt-4">
+    © 2026 Shyamkasturi Productions. All Rights Reserved.
+  </p>
+</footer>
     </main>
+    </>
   );
 }
