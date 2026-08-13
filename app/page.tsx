@@ -1,8 +1,7 @@
-import Navbar from "./components/Navbar";
+import Image from "next/image";
 
 export default function Home() {
-  const productions = [
-    "Feature Film Project",
+  const productions = [    "Feature Film Project",
     "OTT Original Series",
     "Theatre Production",
     "Music Album",
@@ -20,45 +19,48 @@ export default function Home() {
         WhatsApp
       </a>
       <main className="bg-black text-white min-h-screen">
-        <Navbar />
-
         {/* Hero */}
-      <section
-  className="min-h-screen flex flex-col justify-center items-center text-center px-6 bg-cover bg-center"
-  style={{
-    backgroundImage:
-      "url('https://images.unsplash.com/photo-1485846234645-a62644f84728')",
-  }}
->
-        <h1 className="text-5xl md:text-8xl font-bold text-yellow-500">
-          Shyamkasturi Productions
-        </h1>
+        <section className="min-h-screen flex flex-col justify-center items-center text-center px-6 py-32 bg-gradient-to-b from-zinc-950 via-black to-black">
+          <div className="w-full max-w-xl rounded-2xl overflow-hidden shadow-[0_0_80px_-10px_rgba(234,179,8,0.35)]">
+            <video
+              className="w-full h-auto"
+              src="/logo-animation.mp4"
+              poster="/logo-poster.png"
+              autoPlay
+              muted
+              playsInline
+            />
+          </div>
 
-        <p className="mt-6 text-2xl text-gray-300">
-          Stories Beyond Boundaries
-        </p>
+          <h1 className="mt-10 text-5xl md:text-7xl font-bold text-yellow-500">
+            Shyamkasturi Productions
+          </h1>
 
-        <p className="mt-6 max-w-3xl text-gray-400">
-          Feature Films • OTT Originals • Theatre Productions • Music Albums •
-          Live Events
-        </p>
+          <p className="mt-6 text-2xl text-gray-300">
+            Stories Beyond Boundaries
+          </p>
 
-        <div className="flex gap-4 mt-10">
-          <a
-            href="#productions"
-            className="bg-yellow-500 text-black px-6 py-3 rounded-lg font-bold"
-          >
-            View Productions
-          </a>
+          <p className="mt-6 max-w-3xl text-gray-400">
+            Feature Films • OTT Originals • Theatre Productions • Music Albums •
+            Live Events
+          </p>
 
-          <a
-            href="#contact"
-            className="border border-yellow-500 px-6 py-3 rounded-lg"
-          >
-            Contact Us
-          </a>
-        </div>
-      </section>
+          <div className="flex gap-4 mt-10">
+            <a
+              href="#productions"
+              className="bg-yellow-500 text-black px-6 py-3 rounded-lg font-bold"
+            >
+              View Productions
+            </a>
+
+            <a
+              href="#contact"
+              className="border border-yellow-500 px-6 py-3 rounded-lg"
+            >
+              Contact Us
+            </a>
+          </div>
+        </section>
 
       {/* About */}
       <section id="about" className="max-w-6xl mx-auto px-8 py-24">
@@ -187,7 +189,15 @@ export default function Home() {
 
       {/* Footer */}
       <footer className="border-t border-yellow-500/20 py-10 text-center">
-  <h3 className="text-yellow-500 font-bold text-xl">
+  <Image
+    src="/logo.png"
+    alt="Shyamkasturi Productions"
+    width={64}
+    height={64}
+    className="mx-auto rounded-full"
+  />
+
+  <h3 className="text-yellow-500 font-bold text-xl mt-4">
     Shyamkasturi Productions
   </h3>
 
