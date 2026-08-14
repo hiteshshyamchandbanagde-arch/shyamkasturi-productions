@@ -14,9 +14,13 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Shyamkasturi Productions",
+  metadataBase: new URL("https://shyamkasturiproductions.com"),
+  title: {
+    default: "Shyamkasturi Productions | Stories Beyond Boundaries",
+    template: "%s | Shyamkasturi Productions",
+  },
   description:
-    "Feature Films, OTT Originals, Theatre Productions, Music Albums and Live Events.",
+    "Pune-based production house working across Feature Films, OTT Originals, Theatre Productions, Music Albums, and Live Events.",
   keywords: [
     "Shyamkasturi Productions",
     "Production House Pune",
@@ -25,7 +29,25 @@ export const metadata: Metadata = {
     "Theatre Productions",
     "Music Albums",
     "Live Events",
+    "AforAudience",
   ],
+  openGraph: {
+    title: "Shyamkasturi Productions | Stories Beyond Boundaries",
+    description:
+      "Pune-based production house working across Feature Films, OTT Originals, Theatre Productions, Music Albums, and Live Events.",
+    url: "https://shyamkasturiproductions.com",
+    siteName: "Shyamkasturi Productions",
+    images: ["/logo-poster.png"],
+    locale: "en_IN",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Shyamkasturi Productions | Stories Beyond Boundaries",
+    description:
+      "Pune-based production house working across Feature Films, OTT Originals, Theatre Productions, Music Albums, and Live Events.",
+    images: ["/logo-poster.png"],
+  },
 };
 
 export default function RootLayout({
